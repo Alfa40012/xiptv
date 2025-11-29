@@ -9,7 +9,6 @@
   <meta name="description" content="سيرفر X IPTV - سيرفر IPTV احترافي بجودات عالية وثبات قوي، قنوات رياضية وأفلام ومسلسلات ومكتبة متجددة. تفعيل وتجديد الأكواد عبر الواتساب مع دعم فني حقيقي.">
   <meta name="keywords" content="سيرفر X IPTV, XIPTV, تجديد كود XIPTV, اشتراك X IPTV, سيرفر iptv, اشتراك iptv, تجديد iptv">
 
-  <!-- عدل اللينك لو عندك دومين تاني -->
   <link rel="canonical" href="https://xiptv.vercel.app/">
 
   <!-- Open Graph -->
@@ -29,7 +28,7 @@
   <meta name="twitter:description" content="سيرفر X IPTV - مكتبة رياضية وترفيهية متجددة بجودات عالية، مع دعم فني عبر الواتساب.">
   <meta name="twitter:image" content="https://b.top4top.io/p_3620zbrd41.png">
 
-  <!-- FAQ Schema for SEO (من غير أسعار) -->
+  <!-- FAQ Schema for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,14 +69,14 @@
 
   <style>
     :root {
-      --primary: #38bdf8;      /* أزرق نيون */
-      --primary-soft: #a855f7; /* بنفسجي نيون */
-      --primary-dark: #0ea5e9; /* أزرق غامق */
-      --accent: #f97316;       /* لمسة برتقالي خفيفة لو احتجناها */
-      --bg: #020617;           /* خلفية داكنة */
-      --card-bg: #020617;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
+      --primary: #ff1a1a;      /* أحمر أساسى */
+      --primary-soft: #ff4d4d; /* أحمر فاتح */
+      --primary-dark: #b30000; /* أحمر غامق */
+      --accent: #ff6b6b;
+      --bg: #000000;
+      --card-bg: #050505;
+      --text: #ff3b3b;         /* لون الكتابة الأساسي */
+      --muted: #ff8f8f;        /* كتابة هادية */
     }
 
     * { box-sizing: border-box; }
@@ -86,10 +85,7 @@
       margin: 0;
       font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       direction: rtl;
-      background:
-        radial-gradient(circle at top left, rgba(56,189,248,0.18) 0, transparent 46%),
-        radial-gradient(circle at top right, rgba(168,85,247,0.20) 0, transparent 50%),
-        radial-gradient(circle at bottom, rgba(15,23,42,0.95) 0, #020617 58%);
+      background: #000000;
       color: var(--text);
       min-height: 100vh;
     }
@@ -115,10 +111,10 @@
       width: 64px;
       height: 64px;
       border-radius: 22px;
-      background: #020617;
+      background: #000;
       box-shadow:
-        0 0 0 2px rgba(56,189,248,0.7),
-        0 0 28px rgba(168,85,247,0.9),
+        0 0 0 2px rgba(255,26,26,0.7),
+        0 0 28px rgba(255,77,77,0.9),
         0 10px 30px rgba(0,0,0,0.9);
       display: flex;
       align-items: center;
@@ -141,12 +137,11 @@
     .top-brand-title {
       font-size: 22px;
       font-weight: 900;
+      color: var(--text);
     }
 
     .top-brand-title span.en {
-      background: linear-gradient(135deg, var(--primary), var(--primary-soft));
-      -webkit-background-clip: text;
-      color: transparent;
+      color: var(--primary-soft);
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
@@ -164,11 +159,11 @@
       border-radius: 28px;
       padding: 22px 20px 24px;
       background:
-        radial-gradient(circle at 10% 0, rgba(56,189,248,0.25) 0, transparent 55%),
-        radial-gradient(circle at 90% 10%, rgba(168,85,247,0.25) 0, transparent 60%),
-        radial-gradient(circle at 0 110%, rgba(15,23,42,0.95) 0, #020617 60%);
-      box-shadow: 0 22px 60px rgba(0,0,0,0.98);
-      border: 1px solid rgba(148,163,184,0.4);
+        radial-gradient(circle at 10% 0, rgba(255,26,26,0.18) 0, transparent 55%),
+        radial-gradient(circle at 90% 10%, rgba(255,77,77,0.18) 0, transparent 60%),
+        #000000;
+      box-shadow: 0 22px 60px rgba(0,0,0,1);
+      border: 1px solid rgba(255,26,26,0.4);
       display: grid;
       grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.7fr);
       gap: 18px;
@@ -189,7 +184,7 @@
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--primary);
+      color: var(--primary-soft);
       margin-bottom: 6px;
     }
 
@@ -198,12 +193,11 @@
       font-size: clamp(26px, 4vw, 34px);
       font-weight: 900;
       line-height: 1.25;
+      color: var(--text);
     }
 
     .hero-title span.en {
-      background: linear-gradient(135deg, var(--primary), var(--primary-soft));
-      -webkit-background-clip: text;
-      color: transparent;
+      color: var(--primary);
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
@@ -212,10 +206,10 @@
       margin: 4px 0 12px;
       font-size: 16px;
       font-weight: 700;
-      color: #f9fafb;
+      color: var(--primary-soft);
     }
 
-    .hero-subtitle strong { color: var(--primary-soft); }
+    .hero-subtitle strong { color: var(--primary); }
 
     .hero-text {
       margin: 0 0 14px;
@@ -230,11 +224,11 @@
       gap: 6px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(15,23,42,0.95);
-      color: #f9fafb;
+      background: #000;
+      color: #ffe5e5;
       font-size: 11px;
       margin-bottom: 6px;
-      border: 1px solid rgba(148,163,184,0.7);
+      border: 1px solid rgba(255,77,77,0.7);
     }
 
     .dot-live {
@@ -261,12 +255,12 @@
       padding: 10px 20px;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg, var(--primary), var(--primary-soft));
-      color: #020617;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #000;
       font-size: 14px;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.95);
+      box-shadow: 0 20px 40px rgba(0,0,0,1);
       white-space: nowrap;
     }
 
@@ -282,14 +276,14 @@
       gap: 6px;
       padding: 9px 15px;
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.95);
-      color: #e5e7eb;
+      border: 1px solid rgba(255,77,77,0.7);
+      background: #050505;
+      color: var(--text);
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.9);
+      box-shadow: 0 14px 30px rgba(0,0,0,1);
     }
 
     .btn-secondary span {
@@ -300,7 +294,7 @@
     .hero-note {
       margin: 6px 0 0;
       font-size: 12px;
-      color: #9ca3af;
+      color: var(--muted);
     }
 
     .hero-media { position: relative; min-height: 210px; }
@@ -309,30 +303,29 @@
       position: relative;
       border-radius: 22px;
       overflow: hidden;
-      background: #020617;
+      background: #000;
       box-shadow:
-        0 0 0 2px rgba(15,23,42,0.95),
-        0 0 40px rgba(56,189,248,0.8),
-        0 20px 55px rgba(0,0,0,0.98);
+        0 0 0 2px rgba(255,26,26,0.6),
+        0 0 40px rgba(255,77,77,0.9),
+        0 20px 55px rgba(0,0,0,1);
     }
 
     .hero-image img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      background: #020617;
+      background: #000;
     }
 
     main { margin-top: 26px; }
     section { margin-bottom: 26px; }
 
     .section-card {
-      background:
-        radial-gradient(circle at top, rgba(15,23,42,0.95) 0, #020617 58%);
+      background: #050505;
       border-radius: 24px;
       padding: 20px 18px 22px;
-      border: 1px solid rgba(51,65,85,0.7);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.95);
+      border: 1px solid rgba(255,26,26,0.3);
+      box-shadow: 0 20px 50px rgba(0,0,0,1);
     }
 
     .section-title {
@@ -340,12 +333,11 @@
       font-size: 20px;
       font-weight: 900;
       text-align: center;
+      color: var(--text);
     }
 
     .section-title span { 
-      background: linear-gradient(135deg, var(--primary), var(--primary-soft));
-      -webkit-background-clip: text;
-      color: transparent;
+      color: var(--primary-soft);
     }
 
     .section-text {
@@ -375,10 +367,10 @@
       border-radius: 18px;
       padding: 14px 12px;
       background:
-        radial-gradient(circle at top left, rgba(56,189,248,0.18) 0, transparent 55%),
-        rgba(15,23,42,0.95);
-      border: 1px solid rgba(148,163,184,0.7);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.9);
+        radial-gradient(circle at top left, rgba(255,26,26,0.18) 0, transparent 55%),
+        #050505;
+      border: 1px solid rgba(255,77,77,0.5);
+      box-shadow: 0 14px 32px rgba(0,0,0,1);
       text-align: right;
       font-size: 13px;
       color: var(--muted);
@@ -388,10 +380,10 @@
       font-size: 14px;
       font-weight: 800;
       margin-bottom: 4px;
-      color: #e5e7eb;
+      color: var(--text);
     }
 
-    /* PAY TAGS (من غير أسعار) */
+    /* PAY TAGS */
     .pay-tags {
       display: flex;
       flex-wrap: wrap;
@@ -404,13 +396,13 @@
     .tag {
       padding: 4px 9px;
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.8);
-      background: rgba(15,23,42,0.95);
+      border: 1px solid rgba(255,77,77,0.6);
+      background: #050505;
       display: inline-flex;
       align-items: center;
       gap: 5px;
       white-space: nowrap;
-      color: #e5e7eb;
+      color: var(--text);
     }
 
     .tag-dot {
@@ -429,10 +421,10 @@
       border-radius: 24px;
       padding: 18px 14px;
       background:
-        radial-gradient(circle at 0 0, rgba(56,189,248,0.35) 0, transparent 55%),
-        radial-gradient(circle at 100% 100%, rgba(168,85,247,0.35) 0, transparent 55%),
-        #020617;
-      border: 1px solid rgba(30,64,175,0.9);
+        radial-gradient(circle at 0 0, rgba(255,26,26,0.35) 0, transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(255,77,77,0.35) 0, transparent 55%),
+        #000;
+      border: 1px solid rgba(255,26,26,0.6);
       box-shadow: 0 24px 60px rgba(0,0,0,1);
       display: flex;
       justify-content: center;
@@ -441,12 +433,12 @@
 
     .logo-brand-inner {
       border-radius: 22px;
-      background: #020617;
+      background: #000;
       padding: 14px 18px;
       box-shadow:
-        0 0 0 2px rgba(148,163,184,0.9),
-        0 0 40px rgba(168,85,247,0.95),
-        0 16px 32px rgba(0,0,0,0.98);
+        0 0 0 2px rgba(255,77,77,0.8),
+        0 0 40px rgba(255,77,77,0.95),
+        0 16px 32px rgba(0,0,0,1);
     }
 
     .logo-brand-inner img {
@@ -462,7 +454,7 @@
       font-size: 12px;
       color: var(--muted);
       padding-top: 16px;
-      border-top: 1px solid rgba(30,64,175,0.7);
+      border-top: 1px solid rgba(255,26,26,0.4);
     }
 
     footer .links {
@@ -474,7 +466,7 @@
       gap: 10px;
     }
 
-    footer .links a { color: #e5e7eb; font-weight: 600; }
+    footer .links a { color: var(--text); font-weight: 600; }
 
     /* WHATSAPP FLOAT */
     .whatsapp-float {
@@ -495,7 +487,7 @@
       color: #fff;
       font-weight: 800;
       font-size: 13px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.9);
+      box-shadow: 0 16px 40px rgba(0,0,0,1);
     }
 
     .whatsapp-btn svg {
@@ -571,7 +563,6 @@
 
       <div class="hero-media">
         <div class="hero-image">
-          <!-- صورة السيرفر شمال الصفحة -->
           <img src="https://b.top4top.io/p_3620zbrd41.png" alt="سيرفر X IPTV">
         </div>
       </div>
